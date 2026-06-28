@@ -3,15 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MZ STORE - Jasa Setup Server Minecraft</title>
+  <title>MZ STORE - Jasa & Layanan Server Minecraft</title>
   <link rel="manifest" href="/manifest.json" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="https://media.base44.com/images/public/user_6a053d5e39cfa6da1ffb819f/a4ec6ba2b_ChatGPTImage27Jun2026181929.png" />
 
-  <!-- ============================================================
-       MZ STORE - Variabel Warna (senada dengan Logo ungu)
-       Ubah nilai HEX di bawah ini untuk menyesuaikan tema.
-       ============================================================ -->
   <style>
     :root {
       --mz-primary: #7c1fd6;
@@ -33,16 +29,12 @@
 
 <body>
 
-<!-- ============================================================
-     BILAH NOTIFIKASI (dinamis, dari Admin)
-     ============================================================ -->
+<!-- BILAH NOTIFIKASI -->
 <div id="notifBar" class="w-full text-center text-sm font-semibold py-2 px-4 mz-hidden"
      style="background: linear-gradient(90deg, var(--mz-primary-dark), var(--mz-primary), var(--mz-secondary)); color:#fff;">
 </div>
 
-<!-- ============================================================
-     NAVBAR
-     ============================================================ -->
+<!-- NAVBAR -->
 <nav class="sticky top-0 z-40 border-b backdrop-blur-md" style="background: rgba(14,8,32,0.85); border-color: var(--mz-primary-dark);">
   <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
     <a href="#home"><img src="https://media.base44.com/images/public/user_6a053d5e39cfa6da1ffb819f/a4ec6ba2b_ChatGPTImage27Jun2026181929.png" alt="MZ Store Logo" class="h-11 w-auto object-contain" /></a>
@@ -64,218 +56,79 @@
   </div>
 </nav>
 
-<!-- ============================================================
-     HALAMAN UTAMA (Front-end)
-     ============================================================ -->
-<div id="mainPage">
+<!-- HERO SLIDER -->
+<section id="home" class="relative w-full max-w-6xl mx-auto mt-6 px-4">
+  <div id="heroSlider" class="relative w-full overflow-hidden rounded-2xl border shadow-2xl" style="border-color:var(--mz-primary-dark); aspect-ratio: 16/9;"></div>
+</section>
 
-  <!-- HERO SLIDER -->
-  <section id="home" class="relative w-full max-w-6xl mx-auto mt-6 px-4">
-    <div id="heroSlider" class="relative w-full overflow-hidden rounded-2xl border shadow-2xl" style="border-color:var(--mz-primary-dark); aspect-ratio: 16/9;"></div>
-  </section>
-
-  <!-- DAFTAR PRODUK -->
-  <section id="produk" class="max-w-6xl mx-auto px-4 py-16">
-    <div class="text-center mb-10">
-      <h2 class="text-3xl font-extrabold text-white">Daftar Layanan &amp; Harga</h2>
-      <p class="mt-2 text-sm" style="color:rgba(243,234,255,0.6)">Punya kode promo? Masukkan untuk dapatkan harga spesial!</p>
-    </div>
-    <div id="productGrid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
-  </section>
-
-  <!-- TESTIMONI -->
-  <section id="testimoni" class="max-w-6xl mx-auto px-4 py-16">
-    <div class="text-center mb-10">
-      <span class="text-xs uppercase tracking-wide font-semibold" style="color:var(--mz-secondary)">Testimoni Pelanggan</span>
-      <h2 class="text-3xl font-extrabold mt-1 text-white">Apa Kata Mereka?</h2>
-      <p class="mt-2 text-sm" style="color:rgba(243,234,255,0.6)">Kepercayaan pelanggan adalah prioritas kami.</p>
-    </div>
-    <div id="testimonialGrid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="max-w-3xl mx-auto px-4 py-16">
-    <div class="text-center mb-10">
-      <span class="text-xs uppercase tracking-wide font-semibold" style="color:var(--mz-secondary)">FAQ</span>
-      <h2 class="text-3xl font-extrabold mt-1 text-white">Pertanyaan yang Sering Diajukan</h2>
-      <p class="mt-2 text-sm" style="color:rgba(243,234,255,0.6)">Punya pertanyaan lain? Hubungi kami via WhatsApp.</p>
-    </div>
-    <div id="faqList" class="space-y-3"></div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer id="kontak" class="border-t mt-10" style="border-color:var(--mz-primary-dark); background:var(--mz-bg-soft)">
-    <div class="max-w-6xl mx-auto px-4 py-12 grid gap-8 md:grid-cols-3">
-      <div>
-        <h3 class="text-xl font-extrabold mb-2 text-white">MZ STORE</h3>
-        <p class="text-sm" style="color:rgba(243,234,255,0.6)">Jasa &amp; layanan Server Minecraft terpercaya. Compre Aqui Já!</p>
-      </div>
-      <div>
-        <h4 class="font-bold mb-2 text-white">Navigasi</h4>
-        <ul class="space-y-1 text-sm" style="color:rgba(243,234,255,0.7)">
-          <li><a href="#home" class="hover:opacity-80">Home</a></li>
-          <li><a href="#produk" class="hover:opacity-80">Produk</a></li>
-          <li><a href="#testimoni" class="hover:opacity-80">Testimoni</a></li>
-          <li><a href="#faq" class="hover:opacity-80">FAQ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-bold mb-2 text-white">Kontak</h4>
-        <a href="https://wa.me/6289612695912" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold" style="color:var(--mz-secondary)">
-          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          WhatsApp: 089612695912
-        </a>
-      </div>
-    </div>
-    <div class="border-t py-4 px-4 flex items-center justify-between text-xs" style="border-color:var(--mz-primary-dark); color:rgba(243,234,255,0.4)">
-      <span id="copyright">© 2026 MZ Store. All rights reserved.</span>
-      <!-- Tombol kecil tersembunyi untuk akses Dashboard Admin -->
-      <button id="adminAccessBtn" title="Admin" class="opacity-20 hover:opacity-100 transition-opacity cursor-pointer">•</button>
-    </div>
-  </footer>
-</div>
-
-<!-- ============================================================
-     HALAMAN LOGIN ADMIN (tersembunyi)
-     ============================================================ -->
-<div id="adminLoginPage" class="min-h-screen flex items-center justify-center px-4 mz-hidden" style="background:var(--mz-bg)">
-  <form id="adminLoginForm" class="w-full max-w-sm rounded-2xl border p-8 shadow-2xl" style="background:var(--mz-bg-soft); border-color:var(--mz-primary-dark)">
-    <div class="flex flex-col items-center mb-6">
-      <div class="p-3 rounded-full mb-3" style="background:var(--mz-primary)">
-        <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-      </div>
-      <h1 class="text-xl font-bold text-white">Admin Login</h1>
-      <p class="text-xs mt-1" style="color:rgba(243,234,255,0.5)">MZ Store Dashboard</p>
-    </div>
-    <input type="password" id="adminPassword" placeholder="Masukkan Password" class="w-full px-4 py-3 rounded-lg text-sm outline-none border mb-3" style="background:var(--mz-bg); border-color:var(--mz-primary-dark)" />
-    <p id="loginError" class="text-xs mb-3 mz-hidden" style="color:#f87171">Password salah!</p>
-    <button type="submit" class="w-full py-3 rounded-lg font-bold text-white" style="background:linear-gradient(90deg,var(--mz-primary),var(--mz-secondary))">Masuk</button>
-    <button type="button" id="backToHomeBtn" class="block text-center text-xs mt-4 hover:opacity-80 w-full" style="color:var(--mz-secondary)">&larr; Kembali ke Beranda</button>
-  </form>
-</div>
-
-<!-- ============================================================
-     DASHBOARD ADMIN
-     ============================================================ -->
-<div id="adminDashboard" class="min-h-screen mz-hidden" style="background:var(--mz-bg)">
-  <header class="border-b sticky top-0 z-10 backdrop-blur" style="border-color:var(--mz-primary-dark); background:rgba(14,8,32,0.9)">
-    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-      <h1 class="font-extrabold text-white">MZ Store · Admin Dashboard</h1>
-      <div class="flex items-center gap-3">
-        <button id="viewSiteBtn" class="text-sm" style="color:var(--mz-secondary)">Lihat Website</button>
-        <button id="logoutBtn" class="text-sm" style="color:#f87171">Keluar</button>
-      </div>
-    </div>
-  </header>
-  <div class="max-w-5xl mx-auto px-4 py-8 space-y-8">
-
-    <!-- Manajemen Notifikasi -->
-    <div class="rounded-2xl border p-6" style="background:var(--mz-bg-soft); border-color:var(--mz-primary-dark)">
-      <div class="flex items-center gap-2 mb-4">
-        <div class="p-2 rounded-lg" style="background:var(--mz-primary)"><svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
-        <h2 class="font-bold text-white">Manajemen Notifikasi</h2>
-      </div>
-      <textarea id="notifInput" rows="2" placeholder="Teks pengumuman di bilah atas..." class="w-full px-4 py-2 rounded-lg text-sm outline-none border mb-3" style="background:var(--mz-bg); border-color:var(--mz-primary-dark)"></textarea>
-      <button id="saveNotifBtn" class="px-4 py-2 rounded-lg font-semibold text-sm text-white" style="background:var(--mz-primary)">Simpan Notifikasi</button>
-      <span id="notifSaved" class="ml-3 text-xs mz-hidden" style="color:#4ade80">Tersimpan!</span>
-    </div>
-
-    <!-- Manajemen Kode Promo -->
-    <div class="rounded-2xl border p-6" style="background:var(--mz-bg-soft); border-color:var(--mz-primary-dark)">
-      <div class="flex items-center gap-2 mb-4">
-        <div class="p-2 rounded-lg" style="background:var(--mz-primary)"><svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
-        <h2 class="font-bold text-white">Manajemen Kode Promo</h2>
-      </div>
-      <div class="flex flex-col sm:flex-row gap-2 mb-4">
-        <input id="promoCode" placeholder="Nama Kode (PROMO30)" class="flex-1 px-3 py-2 rounded-lg text-sm outline-none border" style="background:var(--mz-bg); border-color:var(--mz-primary-dark)" />
-        <input id="promoDiscount" type="number" placeholder="Diskon %" class="w-full sm:w-32 px-3 py-2 rounded-lg text-sm outline-none border" style="background:var(--mz-bg); border-color:var(--mz-primary-dark)" />
-        <button id="addPromoBtn" class="px-4 py-2 rounded-lg font-semibold text-sm text-white" style="background:var(--mz-primary)">Tambah</button>
-      </div>
-      <table class="w-full text-sm"><thead><tr style="color:var(--mz-secondary)"><th class="text-left py-2">Kode</th><th class="text-left py-2">Diskon</th><th class="text-right py-2">Aksi</th></tr></thead><tbody id="promoTableBody"></tbody></table>
-    </div>
-
-    <!-- Manajemen Produk -->
-    <div class="rounded-2xl border p-6" style="background:var(--mz-bg-soft); border-color:var(--mz-primary-dark)">
-      <div class="flex items-center gap-2 mb-4">
-        <div class="p-2 rounded-lg" style="background:var(--mz-primary)"><svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M16.5 9.4l-9-5.19M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
-        <h2 class="font-bold text-white">Manajemen Produk</h2>
-      </div>
-      <div class="grid sm:grid-cols-2 gap-2 mb-2">
-        <input id="prodName" placeholder="Nama Produk" class="px-3 py-2 rounded-lg text-sm outline-none border" style="background:var(--mz-bg); border-color:var(--mz-primary-dark)" />
-        <input id="prodDesc" placeholder="Deskripsi" class="px-3 py-2 rounded-lg text-sm outline-none border" style="background:var(--mz-bg); border-color:var(--mz-primary-dark)" />
-        <input id="prodPrice" type="number" placeholder="Harga Mulai (cth: 10000)" class="px-3 py-2 rounded-lg text-sm outline-none border" style="background:var(--mz-bg); border-color:var(--mz-primary-dark)" />
-        <input id="prodPriceMax" type="number" placeholder="Harga Maks (opsional)" class="px-3 py-2 rounded-lg text-sm outline-none border" style="background:var(--mz-bg); border-color:var(--mz-primary-dark)" />
-      </div>
-      <button id="addProdBtn" class="px-4 py-2 rounded-lg font-semibold text-sm text-white mb-4" style="background:var(--mz-primary)">Tambah Produk</button>
-      <div id="prodList" class="space-y-2"></div>
-    </div>
-
-    <!-- Manajemen Testimoni -->
-    <div class="rounded-2xl border p-6" style="background:var(--mz-bg-soft); border-color:var(--mz-primary-dark)">
-      <div class="flex items-center gap-2 mb-4">
-        <div class="p-2 rounded-lg" style="background:var(--mz-primary)"><svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <h2 class="font-bold text-white">Manajemen Testimoni</h2>
-      </div>
-      <div class="grid sm:grid-cols-2 gap-2 mb-2">
-        <input id="testiName" placeholder="Nama Pelanggan" class="px-3 py-2 rounded-lg text-sm outline-none border" style="background:var(--mz-bg); border-color:var(--mz-primary-dark)" />
-        <input id="testiRole" placeholder="Role/Server (cth: Owner CraftID)" class="px-3 py-2 rounded-lg text-sm outline-none border" style="background:var(--mz-bg); border-color:var(--mz-primary-dark)" />
-      </div>
-      <textarea id="testiText" rows="2" placeholder="Isi testimoni..." class="w-full px-3 py-2 rounded-lg text-sm outline-none border mb-2" style="background:var(--mz-bg); border-color:var(--mz-primary-dark)"></textarea>
-      <div class="flex items-center gap-2 mb-3">
-        <label class="text-xs" style="color:rgba(243,234,255,0.6)">Rating:</label>
-        <select id="testiRating" class="px-2 py-1 rounded-lg text-sm outline-none border" style="background:var(--mz-bg); border-color:var(--mz-primary-dark)">
-          <option value="5">5 bintang</option><option value="4">4 bintang</option><option value="3">3 bintang</option><option value="2">2 bintang</option><option value="1">1 bintang</option>
-        </select>
-      </div>
-      <button id="addTestiBtn" class="px-4 py-2 rounded-lg font-semibold text-sm text-white mb-4" style="background:var(--mz-primary)">Tambah Testimoni</button>
-      <div id="testiList" class="space-y-2"></div>
-    </div>
-
-    <!-- Manajemen FAQ -->
-    <div class="rounded-2xl border p-6" style="background:var(--mz-bg-soft); border-color:var(--mz-primary-dark)">
-      <div class="flex items-center gap-2 mb-4">
-        <div class="p-2 rounded-lg" style="background:var(--mz-primary)"><svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-        <h2 class="font-bold text-white">Manajemen FAQ</h2>
-      </div>
-      <input id="faqQuestion" placeholder="Pertanyaan..." class="w-full px-3 py-2 rounded-lg text-sm outline-none border mb-2" style="background:var(--mz-bg); border-color:var(--mz-primary-dark)" />
-      <textarea id="faqAnswer" rows="2" placeholder="Jawaban..." class="w-full px-3 py-2 rounded-lg text-sm outline-none border mb-2" style="background:var(--mz-bg); border-color:var(--mz-primary-dark)"></textarea>
-      <button id="addFaqBtn" class="px-4 py-2 rounded-lg font-semibold text-sm text-white mb-4" style="background:var(--mz-primary)">Tambah FAQ</button>
-      <div id="faqListAdmin" class="space-y-2"></div>
-    </div>
-
-    <!-- Manajemen Banner -->
-    <div class="rounded-2xl border p-6" style="background:var(--mz-bg-soft); border-color:var(--mz-primary-dark)">
-      <div class="flex items-center gap-2 mb-4">
-        <div class="p-2 rounded-lg" style="background:var(--mz-primary)"><svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-        <h2 class="font-bold text-white">Manajemen Banner</h2>
-      </div>
-      <div class="rounded-lg px-3 py-2 mb-4 text-xs font-semibold" style="background:rgba(124,31,214,0.2); color:var(--mz-secondary)">
-        ⚠️ PERHATIAN: Pastikan ukuran banner adalah 1920x1080 pixel agar tidak pecah/stretch saat di-upload!
-      </div>
-      <div class="flex flex-col sm:flex-row gap-2 mb-3">
-        <input id="bannerUrl" placeholder="Tempel URL gambar banner..." class="flex-1 px-3 py-2 rounded-lg text-sm outline-none border" style="background:var(--mz-bg); border-color:var(--mz-primary-dark)" />
-        <button id="addBannerUrlBtn" class="px-4 py-2 rounded-lg font-semibold text-sm text-white" style="background:var(--mz-primary)">Tambah via Link</button>
-      </div>
-      <label class="flex items-center justify-center gap-2 px-4 py-3 rounded-lg border-2 border-dashed cursor-pointer mb-4 text-sm" style="border-color:var(--mz-primary-dark); color:var(--mz-secondary)">
-        <span id="uploadLabel">Upload File Gambar Banner</span>
-        <input id="bannerFile" type="file" accept="image/*" style="display:none" />
-      </label>
-      <div id="bannerList" class="grid grid-cols-2 sm:grid-cols-3 gap-3"></div>
-    </div>
-
+<!-- DAFTAR PRODUK -->
+<section id="produk" class="max-w-6xl mx-auto px-4 py-16">
+  <div class="text-center mb-10">
+    <h2 class="text-3xl font-extrabold text-white">Daftar Layanan &amp; Harga</h2>
+    <p class="mt-2 text-sm" style="color:rgba(243,234,255,0.6)">Punya kode promo? Masukkan untuk dapatkan harga spesial!</p>
   </div>
-</div>
+  <div id="productGrid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+</section>
+
+<!-- TESTIMONI -->
+<section id="testimoni" class="max-w-6xl mx-auto px-4 py-16">
+  <div class="text-center mb-10">
+    <span class="text-xs uppercase tracking-wide font-semibold" style="color:var(--mz-secondary)">Testimoni Pelanggan</span>
+    <h2 class="text-3xl font-extrabold mt-1 text-white">Apa Kata Mereka?</h2>
+    <p class="mt-2 text-sm" style="color:rgba(243,234,255,0.6)">Kepercayaan pelanggan adalah prioritas kami.</p>
+  </div>
+  <div id="testimonialGrid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="max-w-3xl mx-auto px-4 py-16">
+  <div class="text-center mb-10">
+    <span class="text-xs uppercase tracking-wide font-semibold" style="color:var(--mz-secondary)">FAQ</span>
+    <h2 class="text-3xl font-extrabold mt-1 text-white">Pertanyaan yang Sering Diajukan</h2>
+    <p class="mt-2 text-sm" style="color:rgba(243,234,255,0.6)">Punya pertanyaan lain? Hubungi kami via WhatsApp.</p>
+  </div>
+  <div id="faqList" class="space-y-3"></div>
+</section>
+
+<!-- FOOTER -->
+<footer id="kontak" class="border-t mt-10" style="border-color:var(--mz-primary-dark); background:var(--mz-bg-soft)">
+  <div class="max-w-6xl mx-auto px-4 py-12 grid gap-8 md:grid-cols-3">
+    <div>
+      <h3 class="text-xl font-extrabold mb-2 text-white">MZ STORE</h3>
+      <p class="text-sm" style="color:rgba(243,234,255,0.6)">Jasa &amp; layanan Server Minecraft terpercaya. Compre Aqui Já!</p>
+    </div>
+    <div>
+      <h4 class="font-bold mb-2 text-white">Navigasi</h4>
+      <ul class="space-y-1 text-sm" style="color:rgba(243,234,255,0.7)">
+        <li><a href="#home" class="hover:opacity-80">Home</a></li>
+        <li><a href="#produk" class="hover:opacity-80">Produk</a></li>
+        <li><a href="#testimoni" class="hover:opacity-80">Testimoni</a></li>
+        <li><a href="#faq" class="hover:opacity-80">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-2 text-white">Kontak</h4>
+      <a href="https://wa.me/6289612695912" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold" style="color:var(--mz-secondary)">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp: 089612695912
+      </a>
+    </div>
+  </div>
+  <div class="border-t py-4 px-4 flex items-center justify-between text-xs" style="border-color:var(--mz-primary-dark); color:rgba(243,234,255,0.4)">
+    <span id="copyright">© 2026 MZ Store. All rights reserved.</span>
+    <a href="/admin.html" title="Admin" class="opacity-20 hover:opacity-100 transition-opacity">•</a>
+  </div>
+</footer>
 
 <script>
 // ============================================================
-// MZ STORE - Logika Vanilla JS + LocalStorage
+// MZ STORE - STOREFRONT (Logika Vanilla JS + LocalStorage)
 // ============================================================
 
 const STORE_KEY = "mzstore_data_v1";
 const WA_NUMBER = "6289612695912";
-const ADMIN_PASSWORD = "aman00";
 
-// Data default ketika pertama kali website dibuka
+// Data default
 const DEFAULTS = {
   notification: "🎉 PROMO SPESIAL! Gunakan kode MINECRAFT30 untuk diskon 30% semua jasa setup server! 🎉",
   banners: [
@@ -303,7 +156,6 @@ const DEFAULTS = {
   ],
 };
 
-// --- Helper: Ambil data dari LocalStorage (atau default) ---
 function getData() {
   try {
     const raw = localStorage.getItem(STORE_KEY);
@@ -311,23 +163,10 @@ function getData() {
     return { ...JSON.parse(JSON.stringify(DEFAULTS)), ...JSON.parse(raw) };
   } catch { return JSON.parse(JSON.stringify(DEFAULTS)); }
 }
-// --- Helper: Simpan data ke LocalStorage & re-render ---
-function saveData(data) { localStorage.setItem(STORE_KEY, JSON.stringify(data)); renderAll(); }
 
-// Format angka menjadi Rupiah
 function formatRupiah(num) { return "Rp " + Number(num).toLocaleString("id-ID"); }
 
-// --- Routing: tampilkan/sembunyikan halaman ---
-function showPage(page) {
-  document.getElementById("mainPage").classList.toggle("mz-hidden", page !== "main");
-  document.getElementById("adminLoginPage").classList.toggle("mz-hidden", page !== "login");
-  document.getElementById("adminDashboard").classList.toggle("mz-hidden", page !== "dashboard");
-  window.scrollTo(0, 0);
-}
-
-// ============================================================
-// RENDER: HALAMAN UTAMA
-// ============================================================
+// --- RENDER ---
 function renderAll() {
   const data = getData();
   renderNotif(data);
@@ -335,10 +174,6 @@ function renderAll() {
   renderProducts(data);
   renderTestimonials(data);
   renderFAQ(data);
-  // Jika dashboard sedang terbuka, refresh juga datanya
-  if (!document.getElementById("adminDashboard").classList.contains("mz-hidden")) {
-    renderAdminAll(data);
-  }
 }
 
 function renderNotif(data) {
@@ -347,7 +182,7 @@ function renderNotif(data) {
   else { bar.classList.add("mz-hidden"); }
 }
 
-// --- Hero Slider (auto-slide setiap 4 detik) ---
+// Hero Slider
 let heroIndex = 0;
 function renderHero(data) {
   const el = document.getElementById("heroSlider");
@@ -366,7 +201,7 @@ function heroGo(dir) { var b = getData().banners||[]; if(b.length===0) return; h
 function heroSet(i) { heroIndex = i; renderHero(getData()); }
 setInterval(function() { var b = getData().banners||[]; if (b.length > 1) heroGo(1); }, 4000);
 
-// --- Daftar Produk dengan input kode promo real-time ---
+// Produk
 function renderProducts(data) {
   var grid = document.getElementById("productGrid");
   grid.innerHTML = (data.products || []).map(function(p) {
@@ -388,7 +223,6 @@ function renderProducts(data) {
   }).join("");
 }
 
-// Terapkan kode promo secara real-time
 function applyPromo(pid) {
   var data = getData();
   var product = (data.products || []).find(function(p) { return p.id === pid; });
@@ -410,7 +244,6 @@ function applyPromo(pid) {
   }
 }
 
-// Tombol Beli Sekarang → WhatsApp dengan pesan dinamis
 function buyNow(pid) {
   var data = getData();
   var product = (data.products || []).find(function(p) { return p.id === pid; });
@@ -427,7 +260,7 @@ function buyNow(pid) {
   window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg), "_blank");
 }
 
-// --- Testimoni ---
+// Testimoni
 function renderTestimonials(data) {
   var grid = document.getElementById("testimonialGrid");
   grid.innerHTML = (data.testimonials || []).map(function(t) {
@@ -441,7 +274,7 @@ function renderTestimonials(data) {
   }).join("");
 }
 
-// --- FAQ (accordion) ---
+// FAQ
 function renderFAQ(data) {
   var list = document.getElementById("faqList");
   list.innerHTML = (data.faqs || []).map(function(f, i) {
@@ -462,158 +295,19 @@ function toggleFAQ(i) {
   icon.style.transform = isHidden ? "rotate(180deg)" : "rotate(0deg)";
 }
 
-// ============================================================
-// RENDER: DASHBOARD ADMIN
-// ============================================================
-function renderAdminAll(data) {
-  document.getElementById("notifInput").value = data.notification || "";
-  renderPromoTable(data);
-  renderProdList(data);
-  renderTestiList(data);
-  renderFaqListAdmin(data);
-  renderBannerList(data);
-}
-
-function renderPromoTable(data) {
-  document.getElementById("promoTableBody").innerHTML = (data.promos || []).map(function(p) {
-    return '<tr class="border-t" style="border-color:var(--mz-primary-dark); color:#fff"><td class="py-2 font-mono">' + p.code + '</td><td class="py-2">' + p.discount + '%</td><td class="py-2 text-right"><button onclick="removePromo(\'' + p.code + '\')" style="color:#f87171"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button></td></tr>';
-  }).join("") || '<tr><td colspan="3" class="py-3 text-center" style="color:rgba(243,234,255,0.4)">Belum ada kode promo.</td></tr>';
-}
-
-function renderProdList(data) {
-  document.getElementById("prodList").innerHTML = (data.products || []).map(function(p) {
-    return '<div class="flex items-center justify-between rounded-lg border px-3 py-2" style="border-color:var(--mz-primary-dark)"><div><p class="font-semibold text-sm text-white">' + p.name + '</p><p class="text-xs" style="color:rgba(243,234,255,0.5)">' + formatRupiah(p.price) + (p.priceMax?" - "+formatRupiah(p.priceMax):"") + '</p></div><button onclick="removeProduct(\'' + p.id + '\')" style="color:#f87171"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button></div>';
-  }).join("");
-}
-
-function renderTestiList(data) {
-  document.getElementById("testiList").innerHTML = (data.testimonials || []).map(function(t) {
-    return '<div class="flex items-start justify-between gap-3 rounded-lg border px-3 py-2" style="border-color:var(--mz-primary-dark)"><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><p class="font-semibold text-sm text-white">' + t.name + '</p><div class="flex">' + Array.from({length:t.rating||5}).map(function() { return '<svg width="12" height="12" fill="#fbbf24" stroke="#fbbf24" stroke-width="1" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'; }).join("") + '</div></div>' + (t.role?'<p class="text-xs" style="color:var(--mz-secondary)">' + t.role + '</p>':"") + '<p class="text-xs mt-1" style="color:rgba(243,234,255,0.6)">"' + t.text + '"</p></div><button onclick="removeTesti(\'' + t.id + '\')" style="color:#f87171"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button></div>';
-  }).join("");
-}
-
-function renderFaqListAdmin(data) {
-  document.getElementById("faqListAdmin").innerHTML = (data.faqs || []).map(function(f) {
-    return '<div class="flex items-start justify-between gap-3 rounded-lg border px-3 py-2" style="border-color:var(--mz-primary-dark)"><div class="flex-1 min-w-0"><p class="font-semibold text-sm text-white">' + f.question + '</p><p class="text-xs mt-1" style="color:rgba(243,234,255,0.6)">' + f.answer + '</p></div><button onclick="removeFAQ(\'' + f.id + '\')" style="color:#f87171"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button></div>';
-  }).join("");
-}
-
-function renderBannerList(data) {
-  document.getElementById("bannerList").innerHTML = (data.banners || []).map(function(b, i) {
-    return '<div class="relative rounded-lg overflow-hidden border" style="border-color:var(--mz-primary-dark)"><img src="' + b + '" class="w-full h-20 object-cover" alt="Banner ' + (i+1) + '" /><button onclick="removeBanner(' + i + ')" class="absolute top-1 right-1 p-1 rounded-full" style="background:rgba(248,113,113,0.9)"><svg width="12" height="12" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button></div>';
-  }).join("");
-}
-
-// ============================================================
-// ADMIN ACTIONS
-// ============================================================
-function saveNotif() {
-  var text = document.getElementById("notifInput").value;
-  var d = getData(); d.notification = text; saveData(d);
-  var s = document.getElementById("notifSaved"); s.classList.remove("mz-hidden");
-  setTimeout(function() { s.classList.add("mz-hidden"); }, 2000);
-}
-function addPromo() {
-  var code = document.getElementById("promoCode").value.trim().toUpperCase();
-  var discount = document.getElementById("promoDiscount").value;
-  if (!code || !discount) return;
-  var d = getData(); d.promos = d.promos.concat([{ code: code, discount: Number(discount) }]); saveData(d);
-  document.getElementById("promoCode").value = ""; document.getElementById("promoDiscount").value = "";
-}
-function removePromo(code) { var d = getData(); d.promos = d.promos.filter(function(p) { return p.code !== code; }); saveData(d); }
-
-function addProduct() {
-  var name = document.getElementById("prodName").value.trim();
-  var desc = document.getElementById("prodDesc").value.trim();
-  var price = document.getElementById("prodPrice").value;
-  var priceMax = document.getElementById("prodPriceMax").value;
-  if (!name || !price) return;
-  var d = getData(); d.products = d.products.concat([{ id:"p"+Date.now(), name:name, description:desc, price:Number(price), priceMax: priceMax?Number(priceMax):null }]); saveData(d);
-  ["prodName","prodDesc","prodPrice","prodPriceMax"].forEach(function(id) { document.getElementById(id).value = ""; });
-}
-function removeProduct(id) { var d = getData(); d.products = d.products.filter(function(p) { return p.id !== id; }); saveData(d); }
-
-function addTesti() {
-  var name = document.getElementById("testiName").value.trim();
-  var role = document.getElementById("testiRole").value.trim();
-  var text = document.getElementById("testiText").value.trim();
-  var rating = Number(document.getElementById("testiRating").value);
-  if (!name || !text) return;
-  var d = getData(); d.testimonials = d.testimonials.concat([{ id:"t"+Date.now(), name:name, role:role, text:text, rating:rating }]); saveData(d);
-  document.getElementById("testiName").value = ""; document.getElementById("testiRole").value = ""; document.getElementById("testiText").value = ""; document.getElementById("testiRating").value = "5";
-}
-function removeTesti(id) { var d = getData(); d.testimonials = d.testimonials.filter(function(t) { return t.id !== id; }); saveData(d); }
-
-function addFAQ() {
-  var q = document.getElementById("faqQuestion").value.trim();
-  var a = document.getElementById("faqAnswer").value.trim();
-  if (!q || !a) return;
-  var d = getData(); d.faqs = d.faqs.concat([{ id:"f"+Date.now(), question:q, answer:a }]); saveData(d);
-  document.getElementById("faqQuestion").value = ""; document.getElementById("faqAnswer").value = "";
-}
-function removeFAQ(id) { var d = getData(); d.faqs = d.faqs.filter(function(f) { return f.id !== id; }); saveData(d); }
-
-function addBannerUrl() {
-  var url = document.getElementById("bannerUrl").value.trim();
-  if (!url) return;
-  var d = getData(); d.banners = d.banners.concat([url]); saveData(d);
-  document.getElementById("bannerUrl").value = "";
-}
-function removeBanner(i) { var d = getData(); d.banners = d.banners.filter(function(_, idx) { return idx !== i; }); saveData(d); }
-
-// Upload file banner → konversi ke base64 → simpan ke LocalStorage
-function handleBannerUpload(e) {
-  var file = e.target.files[0];
-  if (!file) return;
-  var label = document.getElementById("uploadLabel");
-  label.textContent = "Mengunggah...";
-  var reader = new FileReader();
-  reader.onload = function(ev) {
-    var d = getData(); d.banners = d.banners.concat([ev.target.result]); saveData(d);
-    label.textContent = "Upload File Gambar Banner";
-    e.target.value = "";
-  };
-  reader.readAsDataURL(file);
-}
-
-// ============================================================
-// EVENT LISTENERS
-// ============================================================
-document.getElementById("adminAccessBtn").addEventListener("click", function() { showPage("login"); });
-document.getElementById("backToHomeBtn").addEventListener("click", function() { showPage("main"); });
-document.getElementById("viewSiteBtn").addEventListener("click", function() { showPage("main"); });
-document.getElementById("logoutBtn").addEventListener("click", function() { showPage("main"); });
+// Mobile menu
 document.getElementById("mobileMenuBtn").addEventListener("click", function() {
-  var m = document.getElementById("mobileMenu");
-  m.classList.toggle("mz-hidden");
+  document.getElementById("mobileMenu").classList.toggle("mz-hidden");
 });
 
-document.getElementById("adminLoginForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  var pwd = document.getElementById("adminPassword").value;
-  if (pwd === ADMIN_PASSWORD) {
-    document.getElementById("loginError").classList.add("mz-hidden");
-    document.getElementById("adminPassword").value = "";
-    renderAdminAll(getData());
-    showPage("dashboard");
-  } else {
-    document.getElementById("loginError").classList.remove("mz-hidden");
-  }
-});
+// Cross-tab sync: re-render jika data berubah dari tab admin
+window.addEventListener("storage", function() { renderAll(); });
 
-document.getElementById("saveNotifBtn").addEventListener("click", saveNotif);
-document.getElementById("addPromoBtn").addEventListener("click", addPromo);
-document.getElementById("addProdBtn").addEventListener("click", addProduct);
-document.getElementById("addTestiBtn").addEventListener("click", addTesti);
-document.getElementById("addFaqBtn").addEventListener("click", addFAQ);
-document.getElementById("addBannerUrlBtn").addEventListener("click", addBannerUrl);
-document.getElementById("bannerFile").addEventListener("change", handleBannerUpload);
-
-// Render pertama kali saat halaman dimuat
+// Render pertama
 renderAll();
 </script>
 
-<!-- Elemen wajib platform (tersembunyi, tidak mengganggu tampilan) -->
+<!-- Elemen wajib platform -->
 <div id="root" style="display:none !important"></div>
 <script type="module" src="/src/main.jsx"></script>
 </body>
